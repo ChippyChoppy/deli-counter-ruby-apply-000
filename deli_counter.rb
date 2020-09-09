@@ -13,11 +13,18 @@ def line(line)
 end
 
 
-def take_a_number(line, name)
-  line<< name 
-  puts "Welcome, #{name}. You are number #{line.size} in line."
+# def take_a_number(line, name)
+#   line<< name 
+#   puts "Welcome, #{name}. You are number #{line.size} in line."
+# end
+$counter = 0 
+def take_a_number(line)
+  $counter += 1 
+  line << $counter
+  puts "Welcome, you are number #{$counter}."
 end
 
+  
 
 def now_serving(line)
  if line != [ ]
