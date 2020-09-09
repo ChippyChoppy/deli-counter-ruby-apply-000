@@ -3,9 +3,12 @@ katz_deli = [ ]
 def line(line)
   if line == [ ]
     puts "The line is currently empty."
-  if line != [ ]
+  else
+    sentence = "The line is currently:"
     line.each.with_index do |name, index|
-      puts "The line is currently: #{index+1}. #{name}"
+      sentence += " #{index + 1}. #{name}"
+    end
+    puts sentence
   end
 end
 
